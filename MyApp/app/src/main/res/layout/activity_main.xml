@@ -9,17 +9,17 @@
     <TextView
         android:id="@+id/Name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="32dp"
         android:layout_marginStart="17dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="267dp"
-        android:layout_marginBottom="683dp"
         android:text="@string/jon_biolette"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
 
     <TextView
         android:id="@+id/FunFacts"
@@ -31,17 +31,16 @@
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.109" />
+        app:layout_constraintVertical_bias="0.114" />
 
     <EditText
         android:id="@+id/FirstFact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
-        android:editable="false"
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/i_have_three_tortoises_named_fred_major_and_noko_i_have_no_idea_how_old_they_are_but_they_can_live_to_be_up_to_50_years_old"
