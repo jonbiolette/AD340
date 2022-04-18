@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">MyApp</string>
     <string name="jon_biolette">Jon Biolette</string>
-    <string name="facts">Facts</string>
-    <string name="i_have_three_tortoises_named_fred_major_and_noko_i_have_no_idea_how_old_they_are_but_they_can_live_to_be_up_to_50_years_old">I have three Tortoises named Fred, Major, and Noko. I have no idea how old they are but they can live to be up to 50 years old.</string>
-    <string name="originally_from_michigan_after_my_time_in_the_marines_i_came_to_seattle_for_school_in_2017">Originally from Michigan, after my time in the Marines I came to Seattle for school in 2017</string>
-    <string name="my_birth_certificate_and_my_social_security_card_does_not_match_due_to_my_parents_not_agreeing_on_how_to_spell_my_name_so_technically_i_m_both_jonathon_and_jonathan">My birth certificate and my social security card does not match due to my parents not agreeing on how to spell my name. So technically I\'m both Jonathon and Jonathan</string>
+    <string name="zip">Zip</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="county">County</string>
+    <string name="name">Name</string>
+    <string name="login">Login</string>
+    <string name="enter_you_name_here">Enter you name here</string>
 </resources>
