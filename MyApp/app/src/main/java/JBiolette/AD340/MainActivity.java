@@ -1,26 +1,26 @@
 package JBiolette.AD340;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.GridView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    Button City,State,County,Zip;
+    Button Movie,State,County,Zip;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.d("MyActivity", "Test log");
 
-        City = (Button) findViewById(R.id.city);
-        City.setOnClickListener(new View.OnClickListener(){
+        Movie = (Button) findViewById(R.id.movie);
+        Movie.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Toast.makeText(MainActivity.this, "Seattle", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, "Seattle", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, Movies.class);
+                startActivity(intent);
             }
         });
         State = (Button) findViewById(R.id.state);
