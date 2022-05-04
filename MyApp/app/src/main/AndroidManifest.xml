@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="JBiolette.AD340">
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -11,12 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApp">
         <activity
+            android:name=".TrafficCamera"
+            android:exported="false"
+            android:label="@string/title_activity_traffic_camera"
+            android:theme="@style/Theme.MyApp.NoActionBar" />
+        <activity
             android:name=".Movies"
             android:exported="false"
             android:label="@string/title_activity_movies"
             android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.MyApp.NoActionBar" />
-
         <activity
             android:name=".MovieDetails"
             android:exported="false"
