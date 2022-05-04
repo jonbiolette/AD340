@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    Button Movie,State,County,Zip;
+    Button Movie,Cam,County,Zip;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,11 +23,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        State = (Button) findViewById(R.id.state);
-        State.setOnClickListener(new View.OnClickListener(){
+
+        Cam = (Button) findViewById(R.id.cam);
+        Cam.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Toast.makeText(MainActivity.this, "Washington", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, "Seattle", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, TrafficCamera.class);
+                startActivity(intent);
             }
         });
         County = (Button) findViewById(R.id.county);

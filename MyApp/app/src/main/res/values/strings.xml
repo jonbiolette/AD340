@@ -2,11 +2,11 @@
     <string name="app_name">MyApp</string>
     <string name="jon_biolette">Jon Biolette</string>
     <string name="zip">Zip</string>
-    <string name="state">State</string>
     <string name="city">City</string>
     <string name="county">County</string>
     <string name="name">Name</string>
     <string name="login">Login</string>
+    <string name="camera">Street Camera</string>
     <string name="enter_you_name_here">Enter you name here</string>
     <string name="title_activity_movies">Movies</string>
     <!-- Strings used for fragments for navigation -->
@@ -20,4 +20,9 @@
     <string name="title_activity_movie_details">MovieDetails</string>
     <string name="movie_details">Movie Details</string>
     <string name="image_of_selected_movie">image of selected movie</string>
+    <string name="traffic_camera">Traffic Camera</string>
+    <string name="title_activity_traffic_camera" />
+    <string name="images">images</string>
+    <string name="image_of_selected_camera" />
+    <string name="todo">TODO</string>
 </resources>
