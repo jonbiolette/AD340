@@ -17,6 +17,7 @@
             android:name=".TrafficCamera"
             android:exported="false"
             android:label="@string/title_activity_traffic_camera"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.MyApp.NoActionBar" />
         <activity
             android:name=".Movies"

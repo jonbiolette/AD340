@@ -67,7 +67,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:layout_marginEnd="30dp"
                 android:layout_weight="10"
                 android:text="Movie" />
 
@@ -77,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="50dp"
-                android:layout_weight="10"
+                android:layout_weight="20"
                 android:text="@string/traffic_camera" />
         </TableRow>
 
@@ -93,10 +92,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:layout_marginEnd="30dp"
-                android:layout_weight="10"
+                android:layout_weight="5"
                 android:text="@string/county"
-                android:textColor="#00796B" />
+                android:textColor="#00695C" />
 
             <Button
                 android:id="@+id/zip"

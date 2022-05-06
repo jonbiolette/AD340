@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.navigation.ui.AppBarConfiguration;
@@ -42,19 +41,15 @@ public class TrafficCamera extends AppCompatActivity {
         setSupportActionBar(binding.toolbar);
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
-
-
         //Testing volley
+
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "https://web6.seattle.gov/Travelers/api/Map/Data?zoomId=13&type=2";
-
 
         final ListView list = findViewById(R.id.list);
         ArrayList<String> arrayList = new ArrayList<>();
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, arrayList);
 
-        TextView textView = new TextView(this);
-        // Testing Array
         JsonObjectRequest objReq = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -63,24 +58,8 @@ public class TrafficCamera extends AppCompatActivity {
                         try {
                             //Returns camera's details
                             JSONArray arr = response.getJSONArray("Features");
-                            //Selecting a single camera
-
-                            for (int i = 0; i < arr.length(); i++) {
-                                JSONObject camera = arr.getJSONObject(i);
-
-                                //Camera.cameraData(camera);
-                                //Selecting a camera's specific details from array
-                                String[] caminfo = camera.getJSONArray("Cameras").toString().split(":");
-
-                                String camId = caminfo[1].substring(0, (caminfo[1].length() - 14));
-                                String camDesc = caminfo[2].substring(0, (caminfo[2].length() - 11));
-                                String camImage = caminfo[3].substring(0, (caminfo[3].length() - 7));
-                                String camType = caminfo[4].substring(0, (caminfo[4].length() - 2));
-                                arrayList.add(camDesc);
-
-
-                                Log.i("Camera " + i + " location: ", camDesc);
-                            }
+                            Camera.createArray(arr);
+                            arrayList.addAll(Camera.getAllSelectedInfo(1));
                             list.setAdapter(arrayAdapter);
 
                         } catch (JSONException e) {
