@@ -10,7 +10,7 @@ public class Camera {
     static ArrayList<String> dataList = new ArrayList<>();
     static String[][] dataset;
     public static void createArray(JSONArray arr) throws JSONException {
-        dataset = new String[arr.length()][4];
+        dataset = new String[arr.length()][5];
         for (int i = 0; i < arr.length(); i++) {
             JSONObject camera = arr.getJSONObject(i);
             String[] caminfo = camera.getJSONArray("Cameras").toString().split(":");
@@ -18,6 +18,9 @@ public class Camera {
             dataset[i][1] = caminfo[2].substring(0, (caminfo[2].length() - 11));;
             dataset[i][2] = caminfo[3].substring(0, (caminfo[3].length() - 7));;
             dataset[i][3] = caminfo[4].substring(0, (caminfo[4].length() - 2));;
+            String[] locationinfo = camera.getJSONArray("PointCoordinate").toString().split(":");
+            dataset[i][4] = locationinfo[0];
+
 
         }
     }
