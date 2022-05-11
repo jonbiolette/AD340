@@ -10,11 +10,11 @@ import androidx.fragment.app.Fragment;
 
 import androidx.navigation.fragment.NavHostFragment;
 
-import JBiolette.AD340.databinding.FragmentSecondBinding;
+import JBiolette.AD340.databinding.FragmentSecond4Binding;
 
-public class SecondFragment extends Fragment {
+public class Second4Fragment extends Fragment {
 
-    private FragmentSecondBinding binding;
+    private FragmentSecond4Binding binding;
 
     @Override
     public View onCreateView(
@@ -22,7 +22,7 @@ public class SecondFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentSecondBinding.inflate(inflater, container, false);
+        binding = FragmentSecond4Binding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -33,8 +33,8 @@ public class SecondFragment extends Fragment {
         binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(SecondFragment.this)
-                        .navigate(R.id.action_SecondFragment_to_FirstFragment);
+                NavHostFragment.findNavController(Second4Fragment.this)
+                        .navigate(R.id.action_Second4Fragment_to_First4Fragment);
             }
         });
     }

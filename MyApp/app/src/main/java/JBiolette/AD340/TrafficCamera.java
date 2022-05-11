@@ -1,12 +1,11 @@
 package JBiolette.AD340;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.ui.AppBarConfiguration;
 
 import com.android.volley.Request;
@@ -63,7 +62,6 @@ public class TrafficCamera extends AppCompatActivity {
                             list.setAdapter(arrayAdapter);
 
                         } catch (JSONException e) {
-                            Log.i("debug", "line 75");
                             e.printStackTrace();
                         }
 

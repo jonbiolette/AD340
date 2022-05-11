@@ -25,4 +25,6 @@
     <string name="images">images</string>
     <string name="image_of_selected_camera" />
     <string name="todo">TODO</string>
+    <string name="title_activity_location">Location</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>
