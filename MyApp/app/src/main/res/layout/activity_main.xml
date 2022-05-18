@@ -4,56 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/mainActivity1">
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="0dp"
+        android:id="@+id/loginButton"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="70dp"
+        android:height="48dp"
         android:text="@string/login"
         app:layout_constraintBottom_toTopOf="@+id/WordTable"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintStart_toEndOf="@+id/userNameLayout"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.49" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/userNameLayout"
+        android:layout_width="190dp"
+        android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:autofillHints="Enter you name here"
         android:ems="10"
-        android:hint="@string/enter_you_name_here"
+        android:hint="@string/user_name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/WordTable"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/loginButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck" />
 
     <TableLayout
         android:id="@+id/WordTable"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button">
+        app:layout_constraintTop_toBottomOf="@+id/loginButton">
 
         <TableRow
             android:id="@+id/Row1"
@@ -68,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_weight="10"
-                android:text="Movie" />
+                android:text="@string/movie" />
 
             <Button
                 android:id="@+id/cam"
@@ -93,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_weight="5"
-                android:text="Location"
+                android:text="@string/location"
                 android:textColor="#00695C" />
 
             <Button
@@ -104,9 +105,44 @@
                 android:layout_marginEnd="50dp"
                 android:layout_weight="10"
                 android:text="@string/zip"
-                android:textColor="#00796B" />
+                android:textColor="#00796B"
+                tools:ignore="TextContrastCheck" />
         </TableRow>
 
     </TableLayout>
+
+    <EditText
+        android:id="@+id/emailAddressLayout"
+        android:layout_width="190dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="207dp"
+        android:layout_marginBottom="43dp"
+        android:autofillHints="E-Mail Address"
+        android:ems="10"
+        android:hint="@string/e_mail_address"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/WordTable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userNameLayout"
+        app:layout_constraintVertical_bias="0.333"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/passwordLayout"
+        android:layout_width="190dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:autofillHints="Password"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/WordTable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailAddressLayout"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
