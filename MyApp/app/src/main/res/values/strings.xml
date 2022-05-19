@@ -9,6 +9,7 @@
     <string name="camera">Street Camera</string>
     <string name="enter_you_name_here">Enter you name here</string>
     <string name="title_activity_movies">Movies</string>
+    <string name="title_activity_firebase">Firebase</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -27,4 +28,9 @@
     <string name="todo">TODO</string>
     <string name="title_activity_location">Location</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="movie">Movie</string>
+    <string name="location">Location</string>
+    <string name="e_mail_address">E-mail Address</string>
+    <string name="user_name">User name</string>
+    <string name="password">Password</string>
 </resources>
