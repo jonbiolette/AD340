@@ -1,4 +1,5 @@
 package JBiolette.AD340;
+
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,23 +25,33 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
+import java.util.Objects;
 
-
+import JBiolette.AD340.databinding.ActivityFirebaseBinding;
 
 
 public class FirebaseActivity extends AppCompatActivity {
+    private ActivityFirebaseBinding binding;
+
+
     private static final String TAG = FirebaseActivity.class.getSimpleName();
     private DatabaseReference myRef;
     ListView userList;
     UserListAdapter listAdapter;
     ArrayList<User> userData = new ArrayList<>();
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firebase);
-//        Toolbar toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        binding = ActivityFirebaseBinding.inflate(getLayoutInflater());
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+
+
+
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         userList = findViewById(R.id.userList);
