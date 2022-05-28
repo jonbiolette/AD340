@@ -1,4 +1,4 @@
-package JBiolette.AD340;
+package com.JBiolette.AD340;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -20,6 +20,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("JBiolette.AD340", appContext.getPackageName());
+        assertEquals("com.JBiolette.AD340", appContext.getPackageName());
     }
 }
